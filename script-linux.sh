@@ -1,1 +1,3 @@
-echo Edit script-linux.sh in your fastmac repo to auto-run commands in your linux instances
+drivepath="Mega:AutoDownloader"
+
+curl https://rclone.org/install.sh | sudo bash
