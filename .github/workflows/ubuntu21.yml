@@ -1,4 +1,4 @@
-name: linux ubuntu 20
+name: ubuntu 21.04
 on: 
   workflow_dispatch:
 defaults:
