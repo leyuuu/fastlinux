@@ -14,17 +14,6 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
-    - name: Inject Rclone&Aria2 config
-      run: |
-        sudo apt install -y ffmpeg
-        mkdir -p ~/.config/rclone/
-        cat >  ~/.config/rclone/rclone.conf  << EOF
-        ${{ secrets.RCLONE_CONF }}
-        EOF
-        mkdir -p ~/.aria2/
-        cat >  ~/.aria2/aria2.conf  << EOF
-        ${{ secrets.ARIA2_CONF }}
-        EOF
     - run: source script-linux.sh
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@master
